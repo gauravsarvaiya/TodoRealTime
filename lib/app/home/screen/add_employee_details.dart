@@ -294,6 +294,11 @@ class _AddEmployeeDetailsState extends State<AddEmployeeDetails> {
     showDialog(
       context: context,
       builder: (context) {
+        final now = DateTime.now();
+        final safeStartDate = startDate ?? now;
+        final safeEndDate = endDate ?? now;
+        final safeInitialDate =
+        safeEndDate.isBefore(safeStartDate) ? safeStartDate : safeEndDate;
         return Dialog(
           backgroundColor: kWhiteColor,
           insetPadding: EdgeInsets.symmetric(horizontal: 16.sp),
@@ -301,8 +306,8 @@ class _AddEmployeeDetailsState extends State<AddEmployeeDetails> {
             borderRadius: BorderRadius.circular(16),
           ),
           child: DatePickerWidget(
-            initialDate: endDate ?? DateTime.now(),
-            firstDate: startDate,
+            initialDate: safeInitialDate,
+            firstDate: safeStartDate,
             // lastDate: endDate,
             onDateSelected: (date) {
               setState(() {

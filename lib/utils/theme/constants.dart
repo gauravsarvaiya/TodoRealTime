@@ -11,6 +11,7 @@ const Color kTextFiledBorderColor = Color(0xFFE5E5E5);
 const Color kBlackColor = Color(0xff000000);
 const Color transparentColor = Color(0x00000000);
 const Color screenBGColor = Color(0xfff2f2f2);
+const Color kRedColor = Color(0xffF34642);
 
 
 final primarySwatchColor = MaterialColor(primaryColorValue, <int, Color>{

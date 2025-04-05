@@ -58,7 +58,7 @@ class _EmployeeListScreenState extends State<EmployeeListScreen> {
                            final employee = state.employees[index];
                            return Dismissible(
                              key: Key(employee.id ?? ""),
-                             background: Container(color: Colors.red, child: Row(
+                             background: Container(color: kRedColor, child: Row(
                                mainAxisAlignment: MainAxisAlignment.end,
                                children: [
                                  ImageUtil.iconImageClass.deleteIcon,
@@ -72,7 +72,7 @@ class _EmployeeListScreenState extends State<EmployeeListScreen> {
                                  id: employee.id ?? "",
                                  endDate: DateTime.now(),
                                );
-                               customToast(context: context, msg: '${employee.name} removed');
+                               customToast(context: context, msg: '${employee.name} data has been deleted');
                              },
                              direction: DismissDirection.endToStart,
                              child: GestureDetector(
@@ -85,6 +85,7 @@ class _EmployeeListScreenState extends State<EmployeeListScreen> {
                                  width: double.infinity,
                                  color: kWhiteColor,
                                  padding: EdgeInsets.all(16.sp),
+                                 margin: EdgeInsets.only(bottom: 1.sp),
                                  child: Column(
                                    crossAxisAlignment: CrossAxisAlignment.start,
                                    spacing: 6.sp,
@@ -116,7 +117,7 @@ class _EmployeeListScreenState extends State<EmployeeListScreen> {
                            return Dismissible(
                              direction: DismissDirection.endToStart,
                              key: Key(employee.id ?? ""),
-                             background: Container(color: Colors.red, child: Row(
+                             background: Container(color: kRedColor, child: Row(
                                mainAxisAlignment: MainAxisAlignment.end,
                                children: [
                                  ImageUtil.iconImageClass.deleteIcon,
@@ -130,7 +131,7 @@ class _EmployeeListScreenState extends State<EmployeeListScreen> {
                                  id: employee.id ?? "",
                                  endDate: DateTime.now(),
                                );
-                               customToast(context: context, msg: '${employee.name} removed');
+                               customToast(context: context, msg: '${employee.name} data has been deleted');
                              },
                              child: GestureDetector(
                                onTap: (){
