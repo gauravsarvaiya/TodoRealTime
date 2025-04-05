@@ -25,7 +25,7 @@ class TodoApp extends StatelessWidget {
             title: 'TODO APP',
             theme: appTheme(context),
             debugShowCheckedModeBanner: false,
-            home:  EmployeeListScreen(),
+            home:EmployeeListScreen(),
           )
           );
         },
