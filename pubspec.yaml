@@ -1,0 +1,52 @@
+name: todo_realtime_innovation
+description: "A new Flutter project."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  intl: ^0.20.2
+  flutter_svg: ^2.0.17
+  flutter_bloc: ^9.1.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.6
+
+
+flutter:
+  uses-material-design: true
+
+
+  assets:
+    - assets/icons/
+    - assets/images/
+
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Roboto-semiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Roboto-medium.ttf
+          weight: 500
+        - asset: assets/fonts/Roboto-Regular.ttf
+          weight: 400
+
